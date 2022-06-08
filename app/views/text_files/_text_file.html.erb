@@ -1,0 +1,8 @@
+<tr>
+  <td><%= text_file.description %></td>
+  <td><%= link_to  'Download', download_text_file_path(text_file), target:"_blank"%></td>
+  <td><%= link_to 'Delete',
+                  text_file_path(text_file),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %></td>
+</tr>

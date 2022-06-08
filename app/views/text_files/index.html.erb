@@ -1,0 +1,16 @@
+<h3>All files</h3>
+
+<%= form_tag results_path, method: :get, role: 'search' do %>
+  <%= text_field_tag :query, params[:query] %>
+  <%= submit_tag 'find', name: nil %>
+<% end %>
+
+<br>
+<%= link_to 'Add new file', new_text_file_path %>
+<br>
+<table class="table">
+  <tr>
+    <th>Description</th>
+    <th colspan="2">Actions</th>
+    <%= render @text_files %>
+</table>

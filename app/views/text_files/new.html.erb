@@ -1,0 +1,10 @@
+<%= form_with model: @text_file, url: text_files_path, method: :post, local: true do |form| %>
+  <div class="field">
+    <%= form.label :txt_file %>
+    <%= form.file_field :txt_file %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

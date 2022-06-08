@@ -1,8 +1,6 @@
 <tr>
   <td><%= text_file.description %></td>
-  <td><%= link_to 'Download',
-                  text_file.txt_file,
-                  download: '' %></td>
+  <td><%= link_to 'Download', download_text_file_path(text_file) %></td>
   <td><%= link_to 'Delete',
                   text_file_path(text_file),
                   method: :delete,
