@@ -1,0 +1,9 @@
+<h3>Результаты поиска по запросу <em><%= params[:query] %></em></h3>
+<br>
+<table class="table">
+  <tr>
+    <th>Description</th>
+    <th colspan="2">Actions</th>
+    <%= render @text_files %>
+</table>
+<%= link_to 'Back', root_path %>
