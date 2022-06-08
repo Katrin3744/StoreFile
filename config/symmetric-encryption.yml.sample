@@ -13,7 +13,7 @@ production:
   - keystore: :file
     cipher_name: aes-256-cbc
     version: 1
-    key_filename: "/home/katrin/.symmetric-encryption/symmetric-encryption_production_v1.encrypted_key"
+    key_filename: "/home/user_name/.symmetric-encryption/symmetric-encryption_production_v1.encrypted_key"
     iv: !binary |-
       RYvBET5oC67HNuFmJ4KuKg==
     key_encrypting_key:
@@ -22,6 +22,6 @@ production:
       iv: !binary |-
         +8wKC6tIcKILo6S35Bm8pA==
       key_encrypting_key:
-        key_filename: "/home/katrin/.symmetric-encryption/symmetric-encryption_production_v1.kekek"
+        key_filename: "/home/user_name/.symmetric-encryption/symmetric-encryption_production_v1.kekek"
         iv: !binary |-
           o12NKX9NuTTI4Ummr28Jsg==

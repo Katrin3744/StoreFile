@@ -19,4 +19,6 @@
 * заполнить файл database.yml на основе database.yml.sample, подлкючиться к бд storage_file_development
 * rails db:migrate 
 * symmetric-encryption --generate
+* mkdir ~/.symmetric-encryption
 * sudo chmod -R 0400 ~/.symmetric-encryption
+* изменить файл symmetric-encryption.yml  соотвествии с symmetric-encryption.yml.sample
