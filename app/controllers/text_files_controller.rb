@@ -11,12 +11,16 @@ class TextFilesController < ApplicationController
   end
 
   def create
-    @text_file = TextFile.new(file_params)
-    if @text_file.save
-      @text_file.encrypt_text_file
-      redirect_to text_files_path
+    if params[:txt_file].present?
+      @text_file = TextFile.new(file_params)
+      if @text_file.save
+        @text_file.encrypt_text_file
+        redirect_to text_files_path
+      else
+        render :new
+      end
     else
-      render :new
+      redirect_to new_text_file_path, notice: 'FILE was not choose'
     end
   end
 
@@ -32,7 +36,7 @@ class TextFilesController < ApplicationController
   private
 
   def file_params
-    params.require(:text_file).permit( :txt_file)
+    params.require(:text_file).permit(:txt_file)
   end
 
   def find_file
